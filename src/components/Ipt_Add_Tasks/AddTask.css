@@ -1,0 +1,25 @@
+.input-class {
+  outline: none;
+  border: 2px solid transparent;
+  background: #dddddd;
+  padding: 0.5rem;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1.15rem;
+  font-weight: 500;
+  flex: 2;
+  transition: 0.5s;
+}
+
+.add-task-container {
+  width: 100%;
+  display: flex;
+  margin-bottom: 1rem;
+  gap: 7px;
+}
+
+.input-class:hover,
+.input-class:focus-within {
+  border: 2px solid #2a6c6b;
+  background: #e7e7e7;
+}
