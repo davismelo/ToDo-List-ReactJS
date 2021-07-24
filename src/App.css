@@ -1,9 +1,12 @@
 .container {
-  max-width: 500px;
-  margin: 30px auto;
+  max-width: 400px;
+  margin: auto;
   overflow: auto;
-  min-height: 300px;
-  border: 2px solid #2a6c6b;
   padding: 30px;
   border-radius: 10px;
+}
+
+.tasks-container {
+  display: flex;
+  flex-direction: column-reverse;
 }

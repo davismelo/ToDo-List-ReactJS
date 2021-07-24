@@ -1,7 +1,7 @@
 .input-class {
   outline: none;
-  border: 2px solid transparent;
-  background: #dddddd;
+  border: none;
+  background: #dcdcdc;
   padding: 0.5rem;
   border-radius: 5px;
   width: 100%;
@@ -14,12 +14,6 @@
 .add-task-container {
   width: 100%;
   display: flex;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
   gap: 7px;
-}
-
-.input-class:hover,
-.input-class:focus-within {
-  border: 2px solid #2a6c6b;
-  background: #e7e7e7;
 }

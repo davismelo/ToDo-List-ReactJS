@@ -16,16 +16,18 @@ const AddTask = ({ handleTaskAddition }) => {
   };
 
   return (
-    <div className="add-task-container ">
-      <input
-        type="text"
-        className="input-class"
-        onChange={handleInputChange}
-        value={inputData}
-        placeholder="Digite aqui sua tarefa..."
-      />
-      <Button onClick={handleAddTaskClick}>Add +</Button>
-    </div>
+    <>
+      <div className="add-task-container ">
+        <input
+          type="text"
+          className="input-class"
+          onChange={handleInputChange}
+          value={inputData}
+          placeholder="Digite aqui sua tarefa..."
+        />
+        <Button onClick={handleAddTaskClick}>Add +</Button>
+      </div>
+    </>
   );
 };
 
