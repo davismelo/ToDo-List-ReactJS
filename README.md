@@ -5,7 +5,8 @@
 <p align="center"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/></p>
 
 ![image2](https://user-images.githubusercontent.com/64112614/126910720-e25dbfd2-0d87-49d5-be76-628e568f84a7.png)
-![gif](https://user-images.githubusercontent.com/64112614/126912273-98b188dd-7508-4cdd-a71f-dbf50d66b433.gif)
+![screen-capture](https://user-images.githubusercontent.com/64112614/126914953-c3596b5f-dac3-4009-ae77-4594d0fcd232.gif)
+
 
 Link do Site: https://todolist-davimelo.netlify.app
 
