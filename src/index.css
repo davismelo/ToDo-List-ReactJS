@@ -4,10 +4,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
   background-color: #f1f1f1;
-  font-family: "Roboto", sans-serif;
   color: #292929;
+}
+
+:root {
+  --cor01: #ff6600;
+  --cor02: #c04f03;
+}
+
+.display-none {
+  display: none;
 }

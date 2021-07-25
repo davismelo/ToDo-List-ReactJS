@@ -5,31 +5,33 @@ import { v4 as uuidv4 } from "uuid";
 import "./App.css";
 import TaskDetails from "./components/Task_Details/TaskDetails";
 import Tasks from "./components/All_Tasks/Tasks";
-import AddTask from "./components/Ipt_Add_Tasks/AddTask";
+import AddTask from "./components/Add_Tasks/AddTask";
 import Header from "./components/Header/Header";
 import BtnDeleteAll from "./components/Btn_DeleteAll/Btn_DeleteAll";
 
 const App = () => {
-  const [tasks, setTasks] = useState([]);
+  // Pegar as tasks do localStorage
+  let allTasks = JSON.parse(localStorage.getItem("tasks"));
 
+  const [tasks, setTasks] = useState(allTasks);
+
+  // Atualizar o localStorage
   useEffect(() => {
-    console.log(tasks);
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
   // Adicionar uma nova task
-  const handleTaskAddition = (taskTitle) => {
-    if (taskTitle !== "") {
-      const newTasks = [
-        ...tasks,
-        {
-          title: taskTitle,
-          id: uuidv4(),
-          completed: false,
-        },
-      ];
-      setTasks(newTasks);
-    }
+  const handleTaskAddition = (taskTitle, taskDescription) => {
+    const newTasks = [
+      ...tasks,
+      {
+        title: taskTitle,
+        id: uuidv4(),
+        completed: false,
+        description: taskDescription,
+      },
+    ];
+    setTasks(newTasks);
   };
 
   // Adicionar/retirar status de task concluida

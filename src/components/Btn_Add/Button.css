@@ -2,8 +2,8 @@
   font-size: 1.15rem;
   border-radius: 6px;
   padding: 0.5rem;
-  border: 2px solid #4eb1b8;
-  color: #276d72;
+  border: 2px solid var(--cor01);
+  background-color: var(--cor01);
   font-weight: 600;
   transition: 0.4s ease;
   cursor: pointer;
@@ -11,6 +11,5 @@
 }
 
 .button:hover {
-  color: #181818;
-  background-color: #4eb1b8;
+  filter: brightness(90%);
 }

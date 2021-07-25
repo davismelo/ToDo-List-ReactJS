@@ -7,9 +7,22 @@ const TaskDetails = () => {
   const params = useParams();
   const history = useHistory();
 
+  let description = JSON.parse(localStorage.getItem("tasks"));
+
   const handleBackBtnClick = () => {
     history.replace("/");
   };
+
+  let taskTitle;
+  let taskDescription;
+  description.forEach((element) => {
+    if (element.id === params.taskTitle) {
+      return (
+        // eslint-disable-next-line no-sequences
+        (taskTitle = element.title), (taskDescription = element.description)
+      );
+    }
+  });
 
   return (
     <>
@@ -17,13 +30,8 @@ const TaskDetails = () => {
         <Button onClick={handleBackBtnClick}>Voltar</Button>
       </div>
       <div className="task-details-container">
-        <h2>{params.taskTitle}</h2>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga
-          provident debitis quidem id tempore similique maxime molestiae tempora
-          cum, fugit saepe eius hic, suscipit non exercitationem nisi quis autem
-          nobis?
-        </p>
+        <h2>{taskTitle}</h2>
+        <p>{taskDescription !== "" ? taskDescription : "Descrição vazia..."}</p>
       </div>
     </>
   );

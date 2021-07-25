@@ -1,0 +1,47 @@
+.add-task-container {
+  width: 100%;
+  margin-bottom: 0.6rem;
+}
+
+.add-task-container > button {
+  width: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  position: fixed;
+  height: 100%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.input-add-container {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: white;
+}
+
+.input-add-container > input,
+.input-add-container > textarea {
+  font-size: 1rem;
+  resize: none;
+  padding: 0.5rem;
+  outline: none;
+  border-radius: 0.35rem;
+  border: 2px solid rgba(160, 160, 160, 0.322);
+}
+
+.input-add-container > svg {
+  font-size: 2rem;
+  cursor: pointer;
+  align-self: flex-end;
+}

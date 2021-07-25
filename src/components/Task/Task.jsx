@@ -7,7 +7,7 @@ const Task = ({ task, handleTaskClick, handleTaskDeletion }) => {
   const history = useHistory();
   const handleTaskDetailsClick = () => {
     // Replace foi utilizado para resolver o problema dele acessar / invés de passar a / no titulo.
-    history.push(`/${task.title.split("/").join("-")}`);
+    history.push(`/${task.id}`);
   };
 
   return (
@@ -17,7 +17,7 @@ const Task = ({ task, handleTaskClick, handleTaskDeletion }) => {
         task.completed
           ? {
               borderLeft: "6px solid #4eb1b8",
-              textDecoration: "line-through 2px",
+              textDecoration: "line-through",
             }
           : {}
       }
