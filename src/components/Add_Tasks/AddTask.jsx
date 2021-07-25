@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { GrClose } from "react-icons/gr";
 
-import Button from "../Btn_Add/Button";
+import Button from "../Button/Button";
 import "./AddTask.css";
 
 const AddTask = ({ handleTaskAddition }) => {

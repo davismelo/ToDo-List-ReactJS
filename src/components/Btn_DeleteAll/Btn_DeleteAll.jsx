@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../Btn_Add/Button";
+import Button from "../Button/Button";
 import "./Btn_DeleteAll.css";
 
 const BtnDeleteAll = ({ handleDeleteAllTasks }) => {

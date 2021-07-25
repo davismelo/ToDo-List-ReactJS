@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams, useHistory } from "react-router-dom";
-import Button from "../Btn_Add/Button";
+import Button from "../Button/Button";
 import "./TaskDetails.css";
 
 const TaskDetails = () => {
