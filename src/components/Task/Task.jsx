@@ -5,8 +5,9 @@ import { useHistory } from "react-router-dom";
 
 const Task = ({ task, handleTaskClick, handleTaskDeletion }) => {
   const history = useHistory();
+
+  // Adiciona o Id da task na url para depois ser capturado.
   const handleTaskDetailsClick = () => {
-    // Replace foi utilizado para resolver o problema dele acessar / invés de passar a / no titulo.
     history.push(`/${task.id}`);
   };
 

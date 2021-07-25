@@ -6,25 +6,27 @@ import Button from "../Btn_Add/Button";
 import "./AddTask.css";
 
 const AddTask = ({ handleTaskAddition }) => {
+  // Valor do titulo
   const [inputData, setInputData] = useState("");
+  // Valor da descrição
   const [inputDescription, setInputDescription] = useState("");
+  // Se o modal está aparecendo ou não
+  const [isShowing, setShow] = useState(false);
 
+  // Capturar mudança no input do nome da task
   const handleInputChange = (e) => {
     setInputData(e.target.value);
   };
 
+  // Capturar mudança no textarea
   const handleDescriptionChange = (e) => {
     setInputDescription(e.target.value);
   };
 
+  // Adicionar task
   const handleAddTaskClick = () => {
     handleTaskAddition(inputData, inputDescription);
-  };
-
-  const showAndHiddenAdd = () => {
-    document.querySelector(".wrapper").classList.toggle("display-none");
-    document.querySelector(".wrapper input").value = "";
-    document.querySelector(".wrapper textarea").value = "";
+    // Limpar Inputs
     setInputData("");
     setInputDescription("");
   };
@@ -32,39 +34,52 @@ const AddTask = ({ handleTaskAddition }) => {
   return (
     <>
       <div className="add-task-container ">
-        <Button onClick={showAndHiddenAdd}>Adicionar uma nova Task</Button>
+        <Button
+          onClick={() => {
+            setShow(true);
+          }}
+        >
+          Adicionar uma nova Task
+        </Button>
       </div>
       <div
-        className="wrapper display-none"
-        onClick={(e) => {
-          if (e.target.className === "wrapper") {
-            showAndHiddenAdd();
-          }
-        }}
+        className="modal"
+        style={
+          isShowing
+            ? {
+                display: "flex",
+              }
+            : {
+                display: "none",
+              }
+        }
+        onClick={(e) => (e.target.className === "modal" ? setShow(false) : {})}
       >
         <div className="input-add-container">
-          <GrClose onClick={showAndHiddenAdd} />
+          <GrClose
+            onClick={() => {
+              setShow(false);
+            }}
+          />
           <input
             type="text"
-            name=""
-            id=""
+            value={inputData}
             placeholder="Título da Task aqui..."
             onChange={handleInputChange}
           />
           <textarea
-            name=""
-            id=""
+            value={inputDescription}
             cols="30"
             rows="10"
             placeholder="Descrição da Task aqui..."
-            maxLength="150"
+            maxLength="250"
             onChange={handleDescriptionChange}
           ></textarea>
           <Button
             onClick={() => {
               if (inputData !== "") {
                 handleAddTaskClick();
-                showAndHiddenAdd();
+                setShow(false);
               }
             }}
           >

@@ -6,17 +6,18 @@ import "./TaskDetails.css";
 const TaskDetails = () => {
   const params = useParams();
   const history = useHistory();
+  let allTasks = JSON.parse(localStorage.getItem("tasks"));
 
-  let description = JSON.parse(localStorage.getItem("tasks"));
-
+  // Voltar para o menu inicial
   const handleBackBtnClick = () => {
     history.replace("/");
   };
 
+  // Capturando o titulo e a descrição da task
   let taskTitle;
   let taskDescription;
-  description.forEach((element) => {
-    if (element.id === params.taskTitle) {
+  allTasks.forEach((element) => {
+    if (element.id === params.taskId) {
       return (
         // eslint-disable-next-line no-sequences
         (taskTitle = element.title), (taskDescription = element.description)

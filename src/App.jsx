@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 
 import "./App.css";
 import TaskDetails from "./components/Task_Details/TaskDetails";
-import Tasks from "./components/All_Tasks/Tasks";
+import Tasks from "./components/All_Tasks/AllTasks";
 import AddTask from "./components/Add_Tasks/AddTask";
 import Header from "./components/Header/Header";
 import BtnDeleteAll from "./components/Btn_DeleteAll/Btn_DeleteAll";
@@ -79,7 +79,7 @@ const App = () => {
             </>
           )}
         />
-        <Route path="/:taskTitle" exact component={TaskDetails} />
+        <Route path="/:taskId" exact component={TaskDetails} />
       </div>
     </Router>
   );
