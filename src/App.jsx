@@ -13,7 +13,15 @@ const App = () => {
   // Pegar as tasks do localStorage
   let allTasks = JSON.parse(localStorage.getItem("tasks"));
 
-  const [tasks, setTasks] = useState(allTasks);
+  const verificationTasks = () => {
+    if (allTasks === null) {
+      return [];
+    } else {
+      return allTasks;
+    }
+  };
+
+  const [tasks, setTasks] = useState(verificationTasks());
 
   // Atualizar o localStorage
   useEffect(() => {
