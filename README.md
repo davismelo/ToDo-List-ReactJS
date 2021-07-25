@@ -7,6 +7,8 @@
 ![image2](https://user-images.githubusercontent.com/64112614/126910720-e25dbfd2-0d87-49d5-be76-628e568f84a7.png)
 ![gif](https://user-images.githubusercontent.com/64112614/126912273-98b188dd-7508-4cdd-a71f-dbf50d66b433.gif)
 
+Link do Site: https://todolist-davimelo.netlify.app
+
 # 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
